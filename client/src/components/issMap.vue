@@ -114,7 +114,7 @@ export default {
     L.marker([50.83333333, 4], {icon: this.eu_icon}).addTo(this.myMap).bindPopup(
       `<h1>ESA</h1>
       <ul>
-        <li># of Visitors: 18</li>
+        <li>No. of Visitors: 18</li>
         <li>Amount Contributed: $5 Billion</li>
         <li>Current Members Onboard: 1</li>
       </ul>`
@@ -125,7 +125,7 @@ export default {
     L.marker([38, -97], {icon: this.usa_icon}).addTo(this.myMap).bindPopup(
       `<h1>NASA</h1>
     <ul>
-      <li># of Visitors: 151</li>
+      <li>No. of Visitors: 151</li>
       <li>Amount Contributed: $58.7 Billion</li>
       <li>Current Members Onboard: 3</li>
     </ul>`
@@ -135,7 +135,7 @@ export default {
     L.marker([60, -95], {icon: this.can_icon}).addTo(this.myMap).bindPopup(
       `<h1>CSA</h1>
     <ul>
-      <li># of Visitors: 8</li>
+      <li>No. of Visitors: 8</li>
       <li>Amount Contributed: $2 Billion</li>
       <li>Current Members Onboard: 0</li>
     </ul>`
@@ -145,7 +145,7 @@ export default {
     L.marker([60, 100], {icon: this.russia_icon}).addTo(this.myMap).bindPopup(
       `<h1>RFSA</h1>
     <ul>
-      <li># of Visitors: 47</li>
+      <li>No. of Visitors: 47</li>
       <li>Amount Contributed: $12 Billion</li>
       <li>Current Members Onboard: 2</li>
     </ul>`
@@ -164,7 +164,7 @@ export default {
     L.marker([36, 138], {icon: this.jpn_icon}).addTo(this.myMap).bindPopup(
       `<h1>JAXA</h1>
     <ul>
-      <li># of Visitors: 9</li>
+      <li>No. of Visitors: 9</li>
       <li>Amount Contributed: $5 Billion</li>
       <li>Current Members Onboard: 0</li>
     </ul>`
