@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app">
 
-    <h1>Hello World</h1>
+    <h1>ISS Tracker</h1>
 
     <iss-map></iss-map>
   </div>
