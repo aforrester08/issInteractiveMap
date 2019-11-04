@@ -33,43 +33,43 @@ export default {
         iconUrl: "https://i2.wp.com/freepngimages.com/wp-content/uploads/2015/12/international-space-station-transparent-background.png?fit=817%2C325",
         iconSize: [50, 50],
         iconAnchor: [0, 0],
-        popupAnchor: [-3, -76],
+        popupAnchor: [0, 0],
       }),
       eu_icon: L.icon({
         iconUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
         iconSize: [50, 35],
-        iconAnchor: [0, 0],
-        popupAnchor: [-3, -76],
+        iconAnchor: [25, 17.5],
+        popupAnchor: [0, 0],
       }),
       usa_icon: L.icon({
         iconUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png",
         iconSize: [50, 35],
-        iconAnchor: [0, 0],
-        popupAnchor: [-3, -76],
+        iconAnchor: [25, 17.5],
+        popupAnchor: [0, 0],
       }),
       jpn_icon: L.icon({
         iconUrl: "https://restcountries.eu/data/jpn.svg",
         iconSize: [50, 35],
-        iconAnchor: [0, 0],
-        popupAnchor: [-3, -76],
+        iconAnchor: [25, 17.5],
+        popupAnchor: [0, 0],
       }),
       russia_icon: L.icon({
         iconUrl: "https://restcountries.eu/data/rus.svg",
         iconSize: [50, 35],
-        iconAnchor: [0, 0],
-        popupAnchor: [-3, -76],
+        iconAnchor: [25, 17.5],
+        popupAnchor: [0, 0],
       }),
       kaz_icon: L.icon({
         iconUrl: "https://restcountries.eu/data/kaz.svg",
         iconSize: [50, 50],
-        iconAnchor: [0, 0],
-        popupAnchor: [-3, -76],
+        iconAnchor: [25, 17.5],
+        popupAnchor: [0, 0],
       }),
       can_icon: L.icon({
         iconUrl: "https://restcountries.eu/data/can.svg",
         iconSize: [50, 35],
-        iconAnchor: [0, 0],
-        popupAnchor: [-3, -76],
+        iconAnchor: [25, 17.5],
+        popupAnchor: [0, 0],
       }),
 
 
@@ -101,7 +101,7 @@ export default {
   },
   mounted () {
 
-    this.myMap = L.map('mapid', {center: [20, 0], zoom: 2.5});
+    this.myMap = L.map('mapid', {center: [20, 0], zoom: 2});
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -111,22 +111,64 @@ export default {
     }).addTo(this.myMap);
 
     //EU
-    L.marker([50.83333333, 4], {icon: this.eu_icon}).addTo(this.myMap)
+    L.marker([50.83333333, 4], {icon: this.eu_icon}).addTo(this.myMap).bindPopup(
+      `<h1>ESA</h1>
+      <ul>
+        <li># of Visitors: 18</li>
+        <li>Amount Contributed: $5 Billion</li>
+        <li>Current Members Onboard: 1</li>
+      </ul>`
+
+    )
 
     //USA
-    L.marker([38, -97], {icon: this.usa_icon}).addTo(this.myMap)
+    L.marker([38, -97], {icon: this.usa_icon}).addTo(this.myMap).bindPopup(
+      `<h1>NASA</h1>
+    <ul>
+      <li># of Visitors: 151</li>
+      <li>Amount Contributed: $58.7 Billion</li>
+      <li>Current Members Onboard: 3</li>
+    </ul>`
+)
 
     //Canada
-    L.marker([60, -95], {icon: this.can_icon}).addTo(this.myMap)
+    L.marker([60, -95], {icon: this.can_icon}).addTo(this.myMap).bindPopup(
+      `<h1>CSA</h1>
+    <ul>
+      <li># of Visitors: 8</li>
+      <li>Amount Contributed: $2 Billion</li>
+      <li>Current Members Onboard: 0</li>
+    </ul>`
+)
 
     //RUSSIA
-    L.marker([60, 100], {icon: this.russia_icon}).addTo(this.myMap)
+    L.marker([60, 100], {icon: this.russia_icon}).addTo(this.myMap).bindPopup(
+      `<h1>RFSA</h1>
+    <ul>
+      <li># of Visitors: 47</li>
+      <li>Amount Contributed: $12 Billion</li>
+      <li>Current Members Onboard: 2</li>
+    </ul>`
+)
 
     //KAZAKSTAN
-    L.marker([48, 68], {icon: this.kaz_icon}).addTo(this.myMap)
+    L.marker([48, 68], {icon: this.kaz_icon}).addTo(this.myMap).bindPopup(
+      `<h1>Baikonur Cosmodrome</h1>
+      <p>Baikonur is the first and largest space port built by the Soviet Union in the 1950s.
+      Today it is responsible for all manned launches to the ISS.
+      </p>
+      `
+    )
 
     //JAPAN
-    L.marker([36, 138], {icon: this.jpn_icon}).addTo(this.myMap)
+    L.marker([36, 138], {icon: this.jpn_icon}).addTo(this.myMap).bindPopup(
+      `<h1>JAXA</h1>
+    <ul>
+      <li># of Visitors: 9</li>
+      <li>Amount Contributed: $5 Billion</li>
+      <li>Current Members Onboard: 0</li>
+    </ul>`
+)
 
 
 
@@ -136,5 +178,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-#mapid { height: 600px; }
+#mapid { height: 600px; width: 1100px }
 </style>
