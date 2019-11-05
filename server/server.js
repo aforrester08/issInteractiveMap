@@ -13,9 +13,14 @@ app.use(bodyParser.json());
 MongoClient.connect('mongodb://localhost:27017')
   .then((client) => {
     const db = client.db('iss_questions');
+
     const questionsCollection = db.collection('questions');
     const questionsRouter = createRouter(questionsCollection);
     app.use('/api/questions', questionsRouter);
+
+    const iconsCollection = db.collection('icons');
+    const iconsRouter = createRouter(iconsCollection);
+    app.use('/api/icons', iconsRouter);
   })
   .catch(console.err);
 

@@ -41,16 +41,17 @@ db.questions.insertMany(
 
   ]);
 
-  db.icons.insertMany({
+  db.icons.insertMany([
 
     {
       "icon":{
         "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
         "iconSize": [50, 35],
         "iconAnchor": [25, 17.5],
-        "popupAnchor": [0, 0],
+        "popupAnchor": [0, 0]
       },
       "info":{
+        "coords": [50.83333333, 4],
         "name": "ESA",
         "visitors": 18,
         "contributed": "$2 Billion",
@@ -62,23 +63,25 @@ db.questions.insertMany(
         "iconUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png",
         "iconSize": [50, 35],
         "iconAnchor": [25, 17.5],
-        "popupAnchor": [0, 0],
+        "popupAnchor": [0, 0]
       },
       "info":{
+        "coords": [38, -97],
         "name": "NASA",
         "visitors": 151,
         "contributed": "$58.7 Billion",
         "on_board": 3
-      },
-    }
+      }
+    },
     {
       "icon":{
         "iconUrl": "https://restcountries.eu/data/jpn.svg",
         "iconSize": [50, 35],
         "iconAnchor": [25, 17.5],
-        "popupAnchor": [0, 0],
+        "popupAnchor": [0, 0]
       },
       "info":{
+        "coords": [36, 138],
         "name": "JAXA",
         "visitors": 9,
         "contributed": "$5 Billion",
@@ -90,9 +93,10 @@ db.questions.insertMany(
         "iconUrl": "https://restcountries.eu/data/rus.svg",
         "iconSize": [50, 35],
         "iconAnchor": [25, 17.5],
-        "popupAnchor": [0, 0],
+        "popupAnchor": [0, 0]
       },
       "info":{
+        "coords": [60, 100],
         "name": "RFSA",
         "visitors": 47,
         "contributed": "$12 Billion",
@@ -104,13 +108,14 @@ db.questions.insertMany(
         "iconUrl": "https://restcountries.eu/data/can.svg",
         "iconSize": [50, 35],
         "iconAnchor": [25, 17.5],
-        "popupAnchor": [0, 0],
+        "popupAnchor": [0, 0]
       },
       "info":{
+        "coords": [60, -95],
         "name": "CSA",
         "visitors": 8,
         "contributed": "$2 Billion",
         "on_board": 0
       }
     }
-  })
+  ])
