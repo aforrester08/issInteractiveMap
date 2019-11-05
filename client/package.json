@@ -11,6 +11,7 @@
     "core-js": "^3.3.2",
     "leaflet": "^1.5.1",
     "vue": "^2.6.10",
+    "vue-google-charts": "^0.3.2",
     "vue2-leaflet": "^2.2.1"
   },
   "devDependencies": {

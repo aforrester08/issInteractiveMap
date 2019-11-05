@@ -5,18 +5,21 @@
 
     <iss-map></iss-map>
     <quiz></quiz>
+    <chart></chart>
   </div>
 </template>
 
 <script>
 import issMap from "./components/issMap.vue";
 import quiz from "./components/quiz.vue"
+import chart from "./components/chart.vue";
 
 export default {
   name: 'app',
   components: {
     'iss-map': issMap,
     'quiz': quiz
+    'chart': chart
   },
   data(){
     return {
