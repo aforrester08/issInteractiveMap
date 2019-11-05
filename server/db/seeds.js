@@ -53,7 +53,7 @@ db.questions.insertMany(
       "info":{
         "name": "ESA",
         "visitors": 18,
-        "contributed": "$5 Billion",
+        "contributed": "$2 Billion",
         "on_board": 1
       }
     },
@@ -68,7 +68,7 @@ db.questions.insertMany(
         "name": "NASA",
         "visitors": 151,
         "contributed": "$58.7 Billion",
-        "on_board": 1
+        "on_board": 3
       },
     }
     {
@@ -79,10 +79,10 @@ db.questions.insertMany(
         "popupAnchor": [0, 0],
       },
       "info":{
-        "name": "ESA",
-        "visitors": 18,
+        "name": "JAXA",
+        "visitors": 9,
         "contributed": "$5 Billion",
-        "on_board": 1
+        "on_board": 0
       }
     },
     {
@@ -93,24 +93,10 @@ db.questions.insertMany(
         "popupAnchor": [0, 0],
       },
       "info":{
-        "name": "ESA",
-        "visitors": 18,
-        "contributed": "$5 Billion",
-        "on_board": 1
-      }
-    },
-    {
-      "icon":{
-        "iconUrl": "https://restcountries.eu/data/kaz.svg",
-        "iconSize": [50, 50],
-        "iconAnchor": [25, 17.5],
-        "popupAnchor": [0, 0],
-      },
-      "info":{
-        "name": "ESA",
-        "visitors": 18,
-        "contributed": "$5 Billion",
-        "on_board": 1
+        "name": "RFSA",
+        "visitors": 47,
+        "contributed": "$12 Billion",
+        "on_board": 2
       }
     },
     {
@@ -121,10 +107,10 @@ db.questions.insertMany(
         "popupAnchor": [0, 0],
       },
       "info":{
-        "name": "ESA",
-        "visitors": 18,
-        "contributed": "$5 Billion",
-        "on_board": 1
+        "name": "CSA",
+        "visitors": 8,
+        "contributed": "$2 Billion",
+        "on_board": 0
       }
     }
   })
