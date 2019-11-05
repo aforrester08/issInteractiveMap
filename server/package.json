@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mogodb": "0.0.1-security",
+    "mongodb": "^3.3.3",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server:dev": "nodemon server.js",
+    "seeds": "mongo < ./db/seeds.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
