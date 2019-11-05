@@ -1,25 +1,37 @@
+use iss_questions;
+db.dropDatabase();
 
-
+db.questions.insertMany(
 [
-
   {
-    "question": "How much did NASA contribute towards the ISS?",
-    "answers": {
-      "option1": {"$58.7 Billion", "correct": true},
-      "option2": {"$45 Billion", "correct": false},
-      "option3": {"$12.3 Billion", "correct": false},
-      "option4": {"$5 Billion", "correct": false},
-    }
+    "text": "How much money has NASA contributed towards the ISS?",
+    "answers": [
+      "$58.7 billion",
+      "$53.2 billion",
+      "$65.4 billion",
+      "80 billion"
+    ],
+    "answer": "$58.7 billion"
   },
-
   {
-    "question": "How many minutes does it take for the ISS to complete one orbit?",
-    "answers": {
-      "option1": {"37", "correct": false},
-      "option2": {"117", "correct": false},
-      "option3": {"92", "correct": true},
-      "option4": {"29", "correct": false},
-    }
+    "text": "How many minutes does it take the ISS to do a orbit of the earth?",
+    "answers": [
+      "15",
+      "30",
+      "60",
+      "90"
+    ],
+    "answer": "90"
+  },
+  {
+    "text": "Which one of these space agencys does not contribute to the ISS?",
+    "answers": [
+      "JAXA",
+      "CNSA",
+      "ESA",
+      "NASA"
+    ],
+    "answer": "CNSA"
   }
 
-]
+]);
