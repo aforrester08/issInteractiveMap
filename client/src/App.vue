@@ -18,7 +18,7 @@ export default {
   name: 'app',
   components: {
     'iss-map': issMap,
-    'quiz': quiz
+    'quiz': quiz,
     'chart': chart
   },
   data(){
