@@ -1,21 +1,29 @@
 <template lang="html">
   <div class="">
-    <ul>
-      <li>The ISS is arguably the most expensive single item ever built. As of 2010, the cost of the station is believed to be $150 billion.</li>
-      <li>On average the ISS travels at 27,724 kilometres (17,227 mi) per hour.</li>
-      <li>The space station completes 15.5 orbits a day, which means the crew members on board the station experience a sunrise or sunset every 92 minutes.</li>
-      <li>Approximately 3.3 million lines of computer code on the ground supports over 1.8 million lines of flight software code for the ISS.</li>
-    </ul>
     <div id="mapid">
+
       <LMap
       :center="[20, 0]"
-      :zoom=2>
+      :zoom="2"
+      :maxZoom="2"
+      :minZoom="2">
       <LTileLayer :url="'https://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png'"> </LTileLayer>
 
       <LMarker
       :lat-lng="[iss_coordinates.latitude, iss_coordinates.longitude]"
       :icon="iss_icon">
-
+      <LPopup>
+        <h1>ISS</h1>
+        <p>The International Space Station (ISS) is a habitable human-made satellite that orbits Earth at an altitude of between 330 km (205mi) and 435 km (270 mi).</p>
+        <p>The ISS completes 15.2 orbits a day or an orbit every 92 minutes.</p>
+        <p>It took 3.3 million lines of code on the ground and 1.8 million lines of onboard flight software to keep the ISS stable</p>
+        <ul>
+          <li>Velocity: 17'227mph</li>
+          <li>Cost: $150'000'000'000</li>
+          <li>Weight: 500'000kg</li>
+          <li>Altitude: 250'000m </li>
+        </ul>
+      </LPopup>
     </LMarker>
 
     <LMarker
@@ -29,21 +37,21 @@
     </LPopup>
   </LMarker>
 
-    <div v-for="country in icons">
-      <LMarker
-      :lat-lng="country.info.coords"
-      :icon="convertIcon(country)"
-      >
-      <LPopup>
-        <h1>{{country.info.name}}</h1>
-        <ul>
-          <li>No. of Visitors: {{country.info.visitors}}</li>
-          <li>Amount Contributed: {{country.info.contributed}}</li>
-          <li>Current Members Onboard: {{country.info.on_board}}</li>
-        </ul>
-      </LPopup>
-    </LMarker>
-  </div>
+  <div v-for="country in icons">
+    <LMarker
+    :lat-lng="country.info.coords"
+    :icon="convertIcon(country)"
+    >
+    <LPopup>
+      <h1>{{country.info.name}}</h1>
+      <ul>
+        <li>No. of Visitors: {{country.info.visitors}}</li>
+        <li>Amount Contributed: {{country.info.contributed}}</li>
+        <li>Current Members Onboard: {{country.info.on_board}}</li>
+      </ul>
+    </LPopup>
+  </LMarker>
+</div>
 </LMap>
 </div>
 </div>
@@ -68,7 +76,7 @@ export default {
       iss_icon: L.icon({
         iconUrl: "https://i2.wp.com/freepngimages.com/wp-content/uploads/2015/12/international-space-station-transparent-background.png?fit=817%2C325",
         iconSize: [50, 50],
-        iconAnchor: [0, 0],
+        iconAnchor: [30, 0],
         popupAnchor: [0, 0],
       }),
       kaz_icon: L.icon({
@@ -124,5 +132,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
 #mapid { height: 600px; width: 1100px }
+
+#map {
+  display: flex;
+  justify-content: center;
+}
+
 </style>
