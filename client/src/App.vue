@@ -30,4 +30,19 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+h1{
+  font-style: OCR A std;
+  color: white
+}
+
+#app{
+
+}
+
+iss-map {
+  display: flex;
+  justify-content: center;
+}
+
 </style>
