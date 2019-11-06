@@ -53,10 +53,7 @@ export default {
         height: '300',
         legend: {position: 'none'},
       }
-
-
     }
-
   }
 }
 

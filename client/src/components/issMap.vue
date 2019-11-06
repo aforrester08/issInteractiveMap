@@ -126,13 +126,10 @@ export default {
       })
     }
   }
-
 }
 
 </script>
-
 <style lang="css" scoped>
-
 
 #mapid { height: 700px; width: 1500px }
 

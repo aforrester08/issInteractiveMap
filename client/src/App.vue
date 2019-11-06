@@ -20,11 +20,6 @@ export default {
     'iss-map': issMap,
     'quiz': quiz,
     'chart': chart
-  },
-  data(){
-    return {
-      // mymap: null
-    }
   }
 }
 </script>
@@ -50,15 +45,6 @@ h1{
 #app{
   justify-content: center;
 }
-
-/* .quiz {
-display: inline-flex;
-flex-wrap: wrap;
-justify-content: center;
-flex-direction: column;
-list-style: none;
-padding: 20px;
-} */
 
 iss-map {
   display: flex;

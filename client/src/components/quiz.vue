@@ -52,9 +52,6 @@ export default {
   align-items: center;
   flex-direction: column;
   list-style: none;
-  /* padding: 20px; */
-
-
 }
 
 .question {
@@ -68,11 +65,8 @@ ul {
 li {
   border-style: solid;
   border-width: 1px;
-  /* padding: 10px; */
-  /* width: 500px; */
   text-align: center;
   list-style: none;
-
 }
 
 .true {
