@@ -29,7 +29,7 @@ db.questions.insertMany(
     {
       "number": 2,
 
-      "text": "Which one of these space agencys does not contribute to the ISS?",
+      "text": "Which one of these space agencies does not contribute to the ISS?",
       "answers": [
         "JAXA",
         "CNSA",

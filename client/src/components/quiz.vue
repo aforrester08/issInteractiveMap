@@ -1,11 +1,11 @@
 <template lang="html">
-  <div class="">
-    <div v-for="(question, questionIndex) in questions">
-      <p>{{question.text}}</p>
-      <div v-for="(answer, answerIndex) in question.answers">
-              <li @click="handleClick(question, answer, answerIndex)" v-bind:class="handleClass(question,answer,answerIndex)">{{answer}}</li>
+  <div class="questions">
+      <div v-for="(question, questionIndex) in questions" class="question">
+        <p>{{question.text}}</p>
+        <ul class="answers">
+          <li v-for="(answer, answerIndex) in question.answers" @click="handleClick(question, answer, answerIndex)" v-bind:class="handleClass(question,answer,answerIndex)">{{answer}}</li>
+        </ul>
       </div>
-    </div>
   </div>
 </template>
 
@@ -47,18 +47,32 @@ export default {
 
 <style lang="css" scoped>
 .questions {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   list-style: none;
-  padding: 20px;
+  /* padding: 20px; */
+
+
+}
+
+.question {
+  max-width: 600px
+}
+
+ul {
+  padding: 0;
 }
 
 li {
   border-style: solid;
   border-width: 1px;
-  padding: 10px;
+  /* padding: 10px; */
+  /* width: 500px; */
+  text-align: center;
+  list-style: none;
+
 }
 
 .true {

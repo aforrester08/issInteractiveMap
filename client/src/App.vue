@@ -4,9 +4,8 @@
     <h1>International Space Station Tracker</h1>
     <h2>Click icons for detailed information <h3>:</h3></h2>
     <iss-map></iss-map>
-    <chart class=""></chart>
+    <chart class="chart"></chart>
     <quiz></quiz>
-
   </div>
 </template>
 
@@ -51,6 +50,15 @@ h1{
 #app{
   justify-content: center;
 }
+
+/* .quiz {
+display: inline-flex;
+flex-wrap: wrap;
+justify-content: center;
+flex-direction: column;
+list-style: none;
+padding: 20px;
+} */
 
 iss-map {
   display: flex;
