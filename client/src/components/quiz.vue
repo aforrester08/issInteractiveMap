@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="">
-    <div v-for="question in questions">
+    <div v-for="(question, questionIndex) in questions">
       <p>{{question.text}}</p>
-      <div v-for="answer in question.answers">
-              <li @click="handleClick(question, answer)" v-bind:class="handleClass(question,answer)">{{answer}}</li>
+      <div v-for="(answer, answerIndex) in question.answers">
+              <li @click="handleClick(question, answer, answerIndex)" v-bind:class="handleClass(question,answer,answerIndex)">{{answer}}</li>
       </div>
     </div>
   </div>
@@ -17,7 +17,9 @@ export default {
   data() {
     return {
       questions: [],
-      show: {0:false, 1:false, 2:false}
+      show: {0:{0:'', 1:'', 2:'', 3:''},
+      1:{0:'', 1:'', 2:'', 3:''},
+      2:{0:'', 1:'', 2:'', 3:''}}
     }
   },
   methods: {
@@ -26,13 +28,12 @@ export default {
       .then(questions => this.questions = questions)
     },
 
-    handleClick(question, answer) {
-      this.show[question.number] = true;
+    handleClick(question, answer, answerIndex) {
+      this.show[question.number][answerIndex] = true;
     },
 
-    handleClass(question, answer){
-      if(this.show[question.number]===true){
-        console.log(this.show[question.number])
+    handleClass(question, answer, answerIndex){
+      if(this.show[question.number][answerIndex]){
         return (answer===question.answer).toString()
       }
     }
@@ -62,6 +63,9 @@ li {
 
 .true {
   background-color: green;
+}
 
-};
+.false {
+  background-color: red;
+}
 </style>
