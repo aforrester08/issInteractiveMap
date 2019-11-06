@@ -47,7 +47,7 @@ db.questions.insertMany(
       "icon":{
         "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
         "iconSize": [50, 35],
-        "iconAnchor": [25, 17.5],
+        "iconAnchor": [25, 10],
         "popupAnchor": [0, 0]
       },
       "info":{
@@ -62,7 +62,7 @@ db.questions.insertMany(
       "icon":{
         "iconUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png",
         "iconSize": [50, 35],
-        "iconAnchor": [25, 17.5],
+        "iconAnchor": [25, 10],
         "popupAnchor": [0, 0]
       },
       "info":{
@@ -77,7 +77,7 @@ db.questions.insertMany(
       "icon":{
         "iconUrl": "https://restcountries.eu/data/jpn.svg",
         "iconSize": [50, 35],
-        "iconAnchor": [25, 17.5],
+        "iconAnchor": [25, 10],
         "popupAnchor": [0, 0]
       },
       "info":{
@@ -92,7 +92,7 @@ db.questions.insertMany(
       "icon":{
         "iconUrl": "https://restcountries.eu/data/rus.svg",
         "iconSize": [50, 35],
-        "iconAnchor": [25, 17.5],
+        "iconAnchor": [25, 10],
         "popupAnchor": [0, 0]
       },
       "info":{
@@ -107,7 +107,7 @@ db.questions.insertMany(
       "icon":{
         "iconUrl": "https://restcountries.eu/data/can.svg",
         "iconSize": [50, 35],
-        "iconAnchor": [25, 17.5],
+        "iconAnchor": [25, 10],
         "popupAnchor": [0, 0]
       },
       "info":{

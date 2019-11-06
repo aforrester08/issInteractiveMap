@@ -1,11 +1,12 @@
 <template lang="html">
   <div id="app">
 
-    <h1>ISS Tracker</h1>
-
+    <h1>International Space Station Tracker</h1>
+    <h2>Click icons for detailed information <h3>:</h3></h2>
     <iss-map></iss-map>
+    <chart class=""></chart>
     <quiz></quiz>
-    <chart></chart>
+
   </div>
 </template>
 
@@ -31,13 +32,24 @@ export default {
 
 <style lang="css" scoped>
 
+h3{
+  color: salmon;
+  display: inline;
+}
+
+h2{
+  font-size: 10px;
+}
+
 h1{
   font-style: OCR A std;
-  color: white
+  color: white;
+  text-align: center;
+  font-size: 50px;
 }
 
 #app{
-
+  justify-content: center;
 }
 
 iss-map {

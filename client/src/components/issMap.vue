@@ -4,9 +4,9 @@
 
       <LMap
       :center="[20, 0]"
-      :zoom="2"
-      :maxZoom="2"
-      :minZoom="2">
+      :zoom="2.5"
+      :maxZoom="2.5"
+      :minZoom="2.5">
       <LTileLayer :url="'https://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png'"> </LTileLayer>
 
       <LMarker
@@ -18,10 +18,10 @@
         <p>The ISS completes 15.2 orbits a day or an orbit every 92 minutes.</p>
         <p>It took 3.3 million lines of code on the ground and 1.8 million lines of onboard flight software to keep the ISS stable</p>
         <ul>
-          <li>Velocity: 17'227mph</li>
-          <li>Cost: $150'000'000'000</li>
-          <li>Weight: 500'000kg</li>
-          <li>Altitude: 250'000m </li>
+          <li>Velocity: 17,227mph</li>
+          <li>Cost: $150,000,000,000</li>
+          <li>Weight: 500,000kg</li>
+          <li>Altitude: 250,000m </li>
         </ul>
       </LPopup>
     </LMarker>
@@ -82,7 +82,7 @@ export default {
       kaz_icon: L.icon({
         iconUrl: "https://restcountries.eu/data/kaz.svg",
         iconSize: [50, 50],
-        iconAnchor: [0, 0],
+        iconAnchor: [25, 10],
         popupAnchor: [0, 0],
       }),
 
@@ -134,7 +134,7 @@ export default {
 <style lang="css" scoped>
 
 
-#mapid { height: 600px; width: 1100px }
+#mapid { height: 700px; width: 1500px }
 
 #map {
   display: flex;

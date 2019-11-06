@@ -47,14 +47,19 @@ export default {
         ['2019', 8]
       ],
       chartOptions: {
-        chart: {
-          title: 'Speed by Vehicle'
-
-        }
+        title: 'Space Walks by Year',
+        backgroundColor: 'grey',
+        width: '1500',
+        height: '300',
+        legend: {position: 'none'},
       }
+
+
     }
+
   }
 }
+
 
 </script>
 
